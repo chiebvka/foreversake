@@ -22,9 +22,9 @@ export default function CategoryPage({ params }: {params: any}) {
       <div className="container mx-auto px-10 mb-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-8 col-span-1">
-            {posts.map((post: [], index: number) => (
-              <PostCard key={index} post={post.node} />
-            ))}
+          {posts.map((post: { node: any }, index: number) => (
+            <PostCard key={index} post={post.node} />
+          ))}
           </div>
           <div className="lg:col-span-4 col-span-1">
             <div className="lg:sticky relative top-8">
