@@ -19,6 +19,7 @@ export default function Home() {
 
   const getPosts_ = async () => {
     const result = await getPosts() as PostsResult;
+    console.log(result)
     setPosts(result.postsConnection.edges);
   }
 
