@@ -4,9 +4,10 @@ import React, { FC } from 'react';
 import Image from 'next/image';
 import moment from 'moment';
 import Link from 'next/link';
+import { getPosts, graphCMSImageLoader } from '@/services';
 
-import { getPosts } from '@/utils/graphql';
-import { graphCMSImageLoader } from '@/utils/graphql';
+// import { getPosts } from '@/utils/graphql';
+// import { graphCMSImageLoader } from '@/utils/graphql';
 
 interface BlogCardProps {
   post: {
