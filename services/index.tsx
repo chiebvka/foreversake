@@ -4,6 +4,31 @@ const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT || '';
 
 export const graphCMSImageLoader = ({ src }: { src: string })  => src;
 
+interface PostDetails {
+  title: string;
+  excerpt: string;
+  featuredImage: {
+    url: string;
+  };
+  author: {
+    name: string;
+    bio: string;
+    photo: {
+      url: string;
+    };
+  };
+  createdAt: string;
+  slug: string;
+  content: {
+    raw: string;
+  };
+  categories: {
+    name: string;
+    slug: string;
+  }[];
+}
+
+
 const MASTER_URL="https://api-us-east-1-shared-usea1-02.hygraph.com/v2/clnnury2731er01uo87wra03r/master";
 
 export const getPosts=async()=>{
@@ -69,7 +94,7 @@ export const getCategories = async () => {
     }
   };
   
-  export const getPostDetails = async (slug: string) => {
+  export const getPostDetails = async (slug: string): Promise<PostDetails | null> => {
   // export const getPostDetails = async (slug:) => {
     if (!slug) {
       throw new Error('Invalid slug'); // Handle this case appropriately
@@ -102,7 +127,7 @@ export const getCategories = async () => {
       }
     `;
   
-    const result: { post: any[] } = await request(graphqlAPI, query, { slug });
+    const result: { post: PostDetails } = await request(graphqlAPI, query, { slug });
 
     return result.post;
   

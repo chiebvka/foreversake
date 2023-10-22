@@ -16,11 +16,11 @@ interface PostDetailProps {
     title: string;
     content: {
       raw: {
-        children: {
+        children: Array<{
           type: string;
-          children: {
+          children: Array<{
             text: string;
-          }[];
+          }>;
           bold?: boolean;
           italic?: boolean;
           underline?: boolean;
@@ -28,35 +28,41 @@ interface PostDetailProps {
           height?: number;
           width?: number;
           src?: string;
-        }[];
-      };
+        }>;
+      } | string;
     };
-  };
+  } | null;
 }
 
 const PostDetail: FC<PostDetailProps> = ({ post }) => {
-  const getContentFragment = (index: number, content: { text: string }[], obj?: { bold?: boolean; italic?: boolean; underline?: boolean; title?: string; height?: number; width?: number; src?: string; }, type?: string) => {
-    const modifiedText: React.ReactNode[] = content.map((item, i) => {
+  if (!post) {
+    return <div>No data found.</div>;
+  }
+
+  const getContentFragment = (content: PostDetailProps['post']['content']['raw'][0], index: number) => {
+    if (typeof content === 'string') {
+      return <p key={index} className="mb-8">{content}</p>;
+    }
+
+    const modifiedText: React.ReactNode[] = content.children.map((item: { text: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | React.PromiseLikeOfReactNode | null | undefined; bold: any; italic: any; underline: any; }, i: React.Key | null | undefined) => {
       let element: React.ReactNode = item.text;
 
-      if (obj) {
-        if (obj.bold) {
-          element = <b key={i}>{element}</b>;
-        }
+      if (item.bold) {
+        element = <b key={i}>{element}</b>;
+      }
 
-        if (obj.italic) {
-          element = <em key={i}>{element}</em>;
-        }
+      if (item.italic) {
+        element = <em key={i}>{element}</em>;
+      }
 
-        if (obj.underline) {
-          element = <u key={i}>{element}</u>;
-        }
+      if (item.underline) {
+        element = <u key={i}>{element}</u>;
       }
 
       return element;
     });
 
-    switch (type) {
+    switch (content.type) {
       case 'heading-three':
         return <h3 key={index} className="text-xl font-semibold mb-4">{modifiedText}</h3>;
       case 'paragraph':
@@ -67,10 +73,10 @@ const PostDetail: FC<PostDetailProps> = ({ post }) => {
         return (
           <img
             key={index}
-            alt={obj?.title}
-            height={obj?.height}
-            width={obj?.width}
-            src={obj?.src}
+            alt={content.title}
+            height={content.height}
+            width={content.width}
+            src={content.src}
           />
         );
       default:
@@ -104,10 +110,11 @@ const PostDetail: FC<PostDetailProps> = ({ post }) => {
             </div>
           </div>
           <h1 className="mb-4 text-2xl lg:text-3xl font-bold leading-none tracking-tight">{post.title}</h1>
-          {post.content.raw.children.map((typeObj, index) => {
-            const children = typeObj.children;
-            return getContentFragment(index, children, typeObj, typeObj.type);
-          })}
+          {Array.isArray(post.content.raw) ? (
+            post.content.raw.map((typeObj, index) => getContentFragment(typeObj, index))
+          ) : (
+            getContentFragment(post.content.raw, 0)
+          )}
         </div>
       </div>
     </>
@@ -115,6 +122,8 @@ const PostDetail: FC<PostDetailProps> = ({ post }) => {
 };
 
 export default PostDetail;
+
+
 
 
 
