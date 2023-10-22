@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, ReactNode } from 'react';
 import moment from 'moment';
 
 interface PostDetailProps {
@@ -14,7 +14,7 @@ interface PostDetailProps {
     };
     createdAt: string;
     title: string;
-    content: {
+    content?: {
       raw: {
         children: Array<{
           type: string;
@@ -32,31 +32,38 @@ interface PostDetailProps {
       } | string;
     };
   } | null;
+  children?: ReactNode;
 }
 
-const PostDetail: FC<PostDetailProps> = ({ post }) => {
+const PostDetail: FC<PostDetailProps> = ({ post, children }) => {
   if (!post) {
     return <div>No data found.</div>;
   }
 
-  const getContentFragment = (content: PostDetailProps['post']['content']['raw'][0], index: number) => {
+  // Check if post.content is defined before accessing it
+  const contentFragment = post.content ? post.content.raw : '';
+
+  const getContentFragment = (
+    content: PostDetailProps['post']['content']['raw'][0],
+    index: number
+  ) => {
     if (typeof content === 'string') {
       return <p key={index} className="mb-8">{content}</p>;
     }
 
-    const modifiedText: React.ReactNode[] = content.children.map((item: { text: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | React.PromiseLikeOfReactNode | null | undefined; bold: any; italic: any; underline: any; }, i: React.Key | null | undefined) => {
+    const modifiedText: React.ReactNode[] = content.children.map((item: { text: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | React.PromiseLikeOfReactNode | null | undefined; bold: any; italic: any; underline: any; }) => {
       let element: React.ReactNode = item.text;
 
       if (item.bold) {
-        element = <b key={i}>{element}</b>;
+        element = <b>{element}</b>;
       }
 
       if (item.italic) {
-        element = <em key={i}>{element}</em>;
+        element = <em>{element}</em>;
       }
 
       if (item.underline) {
-        element = <u key={i}>{element}</u>;
+        element = <u>{element}</u>;
       }
 
       return element;
@@ -73,7 +80,7 @@ const PostDetail: FC<PostDetailProps> = ({ post }) => {
         return (
           <img
             key={index}
-            alt={content.title}
+            alt={content.title || ''}
             height={content.height}
             width={content.width}
             src={content.src}
@@ -110,10 +117,10 @@ const PostDetail: FC<PostDetailProps> = ({ post }) => {
             </div>
           </div>
           <h1 className="mb-4 text-2xl lg:text-3xl font-bold leading-none tracking-tight">{post.title}</h1>
-          {Array.isArray(post.content.raw) ? (
-            post.content.raw.map((typeObj, index) => getContentFragment(typeObj, index))
+          {Array.isArray(contentFragment) ? (
+            contentFragment.map((typeObj, index) => getContentFragment(typeObj, index))
           ) : (
-            getContentFragment(post.content.raw, 0)
+            getContentFragment(contentFragment, 0)
           )}
         </div>
       </div>
@@ -122,6 +129,7 @@ const PostDetail: FC<PostDetailProps> = ({ post }) => {
 };
 
 export default PostDetail;
+
 
 
 
