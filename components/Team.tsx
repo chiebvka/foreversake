@@ -15,7 +15,7 @@ const Team = () => {
         {team.map((team) => (
         <div
           key={team.index}
-          className="relative overflow-hidden transition duration-300 transform rounded shadow-lg lg:hover:-translate-y-2 focus:scale-110 hover:scale-110"
+          className="relative border border-primary items-centerflex justify-center overflow-hidden transition duration-300 transform rounded shadow-lg lg:hover:-translate-y-2 focus:scale-110 hover:scale-110"
         >
           <img
             className="object-cover w-full h-80"

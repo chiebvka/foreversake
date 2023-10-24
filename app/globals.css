@@ -3,6 +3,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Hey October';
+  src: url('/public/fonts/hey_october.ttf');
+}
+
 
 @layer base {
   :root {
@@ -31,6 +36,7 @@
 html, body {
   padding: 0;
   margin: 0;
+  font-family: Hey October !important;
 }
 
 html::before, body::before {
@@ -52,6 +58,21 @@ a {
 }
 * {
   box-sizing: border-box;
+}
+
+.swiper {
+  width: 240px;
+  height: 320px;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
 }
 
 

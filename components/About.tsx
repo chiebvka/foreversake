@@ -1,8 +1,13 @@
 "use client" 
 
-import React from 'react'
-import Image from 'next/image'
-import { LeftFadeIn } from '@/utils/motion'
+import React from 'react';
+import Image from 'next/image';
+import { LeftFadeIn } from '@/utils/motion';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/effect-cards';
+
+import { EffectCards } from 'swiper/modules';
 
 
 type Props = {}
@@ -26,16 +31,59 @@ export default function About({}: Props) {
 
             </LeftFadeIn>
 
-            <div className="gap-4 items-center py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 flex flex-col lg:flex-row-reverse">
-                <div className="flex flex-col text-right lg:text-left justify-start lg:justify-center pt-8 lg:pt-14 gap-4 w-[full] lg:w-[50%] lg:h-[100vh] relative lg:sticky top-0">
+            <div className="gap-4 items-center py-2 px-4 mx-auto max-w-screen-xl  flex flex-col lg:flex-row-reverse">
+                <div className="flex flex-col text-right lg:text-left justify-start lg:justify-center gap-4 w-[full] lg:w-[50%] lg:h-[50vh] relative lg:sticky top-0">
                     <h1 className='text-4xl tracking-tight font-extrabold text-primary'>
                         Preserve, present & celebrate loved one’s stories.
                     </h1>
                     <p className='font-light text-white'>In the following three years, the Foreversake team meticulously formed partnerships with top-tier suppliers, preparing for market entry. Their dedication to revolutionize remembering loved ones positioned them on the brink of reshaping the memorial industry. Dean Macrae, Stewart Gray, and their team have crafted Foreversake into a promising venture, making memories eternal through technology and ready to redefine how we commemorate those we've lost.</p>
                 </div>
 
-                <div className="scroll pt-24 lg:pt-0">
-                    <div className='xl:h-[35vh] lg:h-[45vh] pl-0 pr-4 lg:pr-24'>
+                <div className="w-[full] lg:w-[50%] ">
+                    <Swiper
+                        effect={'cards'}
+                        grabCursor={true}
+                        modules={[EffectCards]}
+                        className="mySwiper"
+                    >
+                        <SwiperSlide>
+                            <Image
+                            src="/about_us_1.webp"
+                            width={250}
+                            height={350}
+                            className=''
+                            alt="About Us Image"
+                            />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <Image
+                            src="/about_us_3.webp"
+                            width={250}
+                            height={350}
+                            className=''
+                            alt="About Us Image"
+                            />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <Image
+                            src="/about_us_5.webp"
+                            width={250}
+                            height={350}
+                            className=''
+                            alt="About Us Image"
+                            />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <Image
+                            src="/about_us_6.webp"
+                            width={250}
+                            height={350}
+                            className=''
+                            alt="About Us Image"
+                            />
+                        </SwiperSlide>
+                    </Swiper>
+                    {/* <div className='xl:h-[35vh] lg:h-[45vh] pl-0 pr-4 lg:pr-24'>
                         <Image
                         src="/about_us_1.webp"
                         width={250}
@@ -70,7 +118,7 @@ export default function About({}: Props) {
                         className='m-2 rounded-2xl rotate-[6deg]'
                         alt="About Us Image"
                         />
-                    </div>
+                    </div> */}
                 </div>
             
             </div>
