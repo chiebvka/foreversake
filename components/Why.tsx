@@ -1,12 +1,10 @@
-import { AiOutlineBulb, AiOutlineTool, AiOutlineEdit, AiOutlineRadarChart, AiOutlineLock, AiOutlineStar } from 'react-icons/ai';
 import { reason } from '@/constants';
 
   const Why = () => {
     return (
       <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-
         <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-24">
-          <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-yellow-300 sm:text-4xl md:mx-auto">
+          <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-primary sm:text-4xl md:mx-auto">
             Why Foreversake
           </h2>
         </div>
@@ -24,7 +22,6 @@ import { reason } from '@/constants';
               <p className="mb-3 font-light text-gray-300">{reason.description}</p>
             </div>
           ))}
-
         </div>
       </div>
     );

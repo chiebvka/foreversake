@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import { useRouter } from "next/navigation";
-import Link from 'next/link';
 import { getCategories } from '@/services';
 
 interface HeaderProps {}
@@ -23,8 +22,8 @@ const Header: React.FC<HeaderProps> = () => {
   }, []);
 
   return (
-    <div className="container mx-auto px-10 mb-8">
-      <div className="border-b w-full inline-block border-yellow-300 pt-4 pb-8">
+    <div className="container mx-auto px-10 mb-6">
+      <div className="border-b w-full inline-block border-primary py-4">
         <div className="flex overflow-x-auto items-center justify-center">
           <button onClick={() => router.push(`/blog`)}>
             <span className="mt-2 align-middle text-white ml-4 font-semibold cursor-pointer">

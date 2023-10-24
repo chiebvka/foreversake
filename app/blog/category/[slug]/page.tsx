@@ -1,13 +1,12 @@
 "use client"
 
 import { useEffect, useState } from "react";
-import { getCategoryPost, getPosts } from "@/services";
+import { getCategoryPost } from "@/services";
 import PostCard from "@/components/PostCard";
 import PostWidget from "@/components/PostWidget";
 
 export default function CategoryPage({ params }: {params: any}) {
   const [posts, setPosts] = useState<any[]>([]); 
-  // const [posts,setPosts]=useState<any>([])
 
   useEffect(() => {
     getPosts_();
@@ -16,12 +15,10 @@ export default function CategoryPage({ params }: {params: any}) {
   const getPosts_ = async () => {
     const result = await getCategoryPost(params.slug);
     if (Array.isArray(result) && result.length > 0 && 'node' in result[0]) {
-      setPosts(result); // Assuming result is an array of objects with a 'node' property
+      setPosts(result); 
     } else {
       console.error('Unexpected data structure from getCategoryPost:', result);
     }
-    // setPosts(result)
-    // console.log(result)
   }
 
   return (

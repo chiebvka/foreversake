@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 @layer base {
   :root {
@@ -31,7 +31,6 @@
 html, body {
   padding: 0;
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
 }
 
 html::before, body::before {
@@ -46,24 +45,6 @@ html::before, body::before {
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.text-shadow {
-  text-shadow: 0px 2px 0px #000;
-}
-.adjacent-post .arrow-btn {
-  transition: width 300ms ease;
-  width: 50px;
-}
-.adjacent-post:hover .arrow-btn {
-  width: 60px;
-}
-.react-multi-carousel-list .arrow-btn {
-  transition: width 300ms ease;
-  width: 50px;
-}
-.react-multi-carousel-list .arrow-btn:hover {
-  width: 60px;
 }
 a {
   color: inherit;

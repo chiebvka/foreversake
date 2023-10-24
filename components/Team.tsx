@@ -1,11 +1,10 @@
-import React from 'react'
 import { team } from '@/constants';
 
 const Team = () => {
   return (
-    <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+    <div className="flex flex-col justify-center items-center px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
       <div className="max-w-xl mb-10 md:mx-auto text-center lg:max-w-2xl md:mb-12">
-        <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-yellow-300 sm:text-4xl md:mx-auto">
+        <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-primary sm:text-4xl md:mx-auto">
           Meet our Team
         </h2>
         <p className="font-light text-white">
@@ -24,7 +23,7 @@ const Team = () => {
             alt="Team member"
           />
           <div className="absolute inset-0 flex flex-col justify-center px-5 py-4 text-center transition-opacity duration-300 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
-            <p className="mb-1 text-lg font-bold text-yellow-300">
+            <p className="mb-1 text-lg font-bold text-primary">
              {team.name}
             </p>
             <p className="mb-4 text-xs tracking-wide text-white">

@@ -2,11 +2,11 @@
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import moment from 'moment';
+import { format, parseISO } from 'date-fns';
 import Link from 'next/link';
 
 import { graphCMSImageLoader } from '@/services';
-import { getSimilarPosts, getRecentPosts } from '@/services';
+import { getRecentPosts } from '@/services';
 
 interface PostWidgetProps {
   categories: string[];
@@ -14,24 +14,18 @@ interface PostWidgetProps {
 }
 
 const PostWidget: React.FC<PostWidgetProps> = ({ categories, slug }) => {
-  const [relatedPosts, setRelatedPosts] = useState<any[]>([]);
+  const [recentPosts, setRecentPosts] = useState<any[]>([]);
 
   useEffect(() => {
-    if (slug) {
-      getSimilarPosts(categories, slug).then((result: any[]) => {
-        setRelatedPosts(result);
-      });
-    } else {
       getRecentPosts().then((result: any[]) => {
-        setRelatedPosts(result);
+        setRecentPosts(result);
       });
-    }
-  }, [slug]);
+  }, []);
 
   return (
     <div className="bg-white shadow-lg rounded-lg p-8">
-      <h3 className="text-xl font-semibold border-b pb-4">Related Posts</h3>
-      {relatedPosts.map((post, index) => (
+      <h3 className="text-xl font-semibold border-b pb-4">Latest Posts</h3>
+      {recentPosts.map((post, index) => (
         <div key={index} className="flex items-center w-full mb-4">
           <div className="w-16 flex-none">
             <Image
@@ -45,7 +39,7 @@ const PostWidget: React.FC<PostWidgetProps> = ({ categories, slug }) => {
             />
           </div>
           <div className="flex-grow ml-4">
-            <p className="text-gray-600 text-sm">{moment(post.createdAt).format('MMM DD, YYYY')}</p>
+            <p className="text-gray-600 text-sm">{format(parseISO(post.createdAt), 'MMM do, yyyy')}</p>
             <Link href={`/blog/${post.slug}`} className="text-sm" key={index}>{post.title}</Link>
           </div>
         </div>

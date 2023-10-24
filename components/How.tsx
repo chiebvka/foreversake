@@ -7,11 +7,11 @@ const Pointer = ({number}: Props) => {
     return(
       <div className="flex flex-col items-center mr-4">
         <div>
-          <div className="flex items-center justify-center w-10 h-10 border border-foreground rounded-full text-yellow-300">
+          <div className="flex items-center justify-center w-10 h-10 border border-foreground rounded-full text-primary">
             {number}
           </div>
         </div>
-        <div className="w-px h-full bg-yellow-300" />
+        <div className="w-px h-full bg-primary" />
       </div>
     )
   }
@@ -21,7 +21,7 @@ export default function How() {
   return (
     <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
       <div className="max-w-xl mb-10 md:mx-auto text-center lg:max-w-2xl md:mb-12">
-        <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-yellow-300 sm:text-4xl md:mx-auto">
+        <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-primary sm:text-4xl md:mx-auto">
           How Foreversake Works
         </h2>
       </div>
@@ -90,24 +90,24 @@ export default function How() {
           </div>
         </div>
 
-        <div className="flex-flex-col">
+        <div className="flex-flex-col md:mt-6">
           <Image
-            src="/how_1.png"
-            width={500}
+            src="/how_3.webp"
+            width={450}
             height={200}
-            alt="How_to_Use_1"
+            className="border-primary rounded-2xl my-5"
+            alt="How_1"
           />
           <Image
-            src="/how_2.png"
-            width={500}
-            height={350}
-            alt="How_to_Use_2"
+            src="/how_4.webp"
+            width={450}
+            height={200}
+            className="border-primary rounded-2xl"
+            alt="How_2"
           />
         </div>
 
-      </div>
-      
-      
+      </div> 
     </div>
   )
 }

@@ -1,14 +1,13 @@
 
 "use client"
 
-import { useEffect, useState } from "react";
 import PostDetail from '@/components/PostDetail';
 import PostWidget from '@/components/PostWidget';
-import { getPosts } from "@/services";
 import { getPostDetails } from '@/services';
 
 export default async function PostDetails({ params }: {params: any}) {
   const post = await getPostDetails(params.slug);
+  
   return (
     <>
       <div className="container mx-auto px-10 mb-8">

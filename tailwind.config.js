@@ -8,17 +8,19 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: 'hsl(var(--background))',
+        background: '#000',
         foreground: 'hsl(var(--foreground))',
+        primary: "#DEB738",
         btn: {
           background: 'hsl(var(--btn-background))',
           'background-hover': 'hsl(var(--btn-background-hover))',
         },
       },
       backgroundImage: {
-        "hero": "url('/hero.jpg')",
-        "about": "url('/about.jpg')",
-        "contact": "url('/contact.jpg')"
+        "hero": "url('/hero.webp')",
+        "mobile": "url('/mobile_hero.webp')",
+        "contact": "url('/contact.webp')",
+        "profile": "url('/profile_background.webp')"
       },
       screens: {
         xs: "450px",
