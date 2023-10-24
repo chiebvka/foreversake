@@ -11,9 +11,9 @@ interface ProfileProps {
   post: {
     firstName: string;
     surname: string;
-    doB: any,
-    doP: any,
-    description: string,
+    doB: any;
+    doP: any;
+    description: string;
     image: {
       url: string;
     };
@@ -22,7 +22,7 @@ interface ProfileProps {
   };
 }
 
-const page: FC<ProfileProps> = () => {
+const Page: FC<ProfileProps> = () => {
   const [profile,setProfile]=useState<any>([])
 
   useEffect(() => {
@@ -124,4 +124,4 @@ const page: FC<ProfileProps> = () => {
   )
 }
 
-export default page
+export default Page

@@ -14,9 +14,9 @@ interface ProfileProps {
   post: {
     firstName: string;
     surname: string;
-    doB: any,
-    doP: any,
-    description: string,
+    doB: any;
+    doP: any;
+    description: string;
     image: {
       url: string;
     };
@@ -29,7 +29,7 @@ interface GalleryTabItem {
   url: string;
 }
 
-const profile: FC<ProfileProps> = ()  => {
+const Page: FC<ProfileProps> = ()  => {
   const [profile,setProfile]=useState<any>([])
   const [open, setOpen] = useState<boolean>(false);
   const [image, setImage] = useState<string>("");
@@ -123,4 +123,4 @@ const profile: FC<ProfileProps> = ()  => {
   )
 }
 
-export default profile
+export default Page
