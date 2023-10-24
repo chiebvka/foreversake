@@ -7,23 +7,7 @@ import ProfileHeader from '@/components/ProfileHeader';
 import { graphCMSImageLoader } from '@/services';
 import { AiFillPlusCircle } from 'react-icons/ai';
 
-interface ProfileProps {
-  post: {
-    firstName: string;
-    surname: string;
-    doB: any;
-    doP: any;
-    description: string;
-    image: {
-      url: string;
-    };
-    birthPlace: string;
-    restPlace: string;
-    relation: string; 
-  };
-}
-
-const Page: FC<ProfileProps> = () => {
+const page = () => {
   const [profile,setProfile]=useState<any>([])
 
   useEffect(() => {
@@ -125,4 +109,4 @@ const Page: FC<ProfileProps> = () => {
   )
 }
 
-export default Page
+export default page

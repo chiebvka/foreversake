@@ -10,27 +10,11 @@ import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/styles.css";
 import { graphCMSImageLoader } from '@/services';
 
-interface ProfileProps {
-  post: {
-    firstName: string;
-    surname: string;
-    doB: any;
-    doP: any;
-    description: string;
-    image: {
-      url: string;
-    };
-    birthPlace: string;
-    restPlace: string;
-    relation: string; 
-  };
-}
-
 interface GalleryTabItem {
   url: string;
 }
 
-const Page: FC<ProfileProps> = ()  => {
+const profile = ()  => {
   const [profile,setProfile]=useState<any>([])
   const [open, setOpen] = useState<boolean>(false);
   const [image, setImage] = useState<string>("");
@@ -124,4 +108,4 @@ const Page: FC<ProfileProps> = ()  => {
   )
 }
 
-export default Page
+export default profile

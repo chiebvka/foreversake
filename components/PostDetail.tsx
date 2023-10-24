@@ -1,6 +1,9 @@
+"use client"
+
 import React, { FC, ReactNode } from 'react';
 import { format, parseISO } from 'date-fns';
-import { RichText } from '@graphcms/rich-text-react-renderer'
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 interface PostDetailProps {
   post: {
@@ -55,12 +58,12 @@ const PostDetail: FC<PostDetailProps> = ({ post }) => {
           </div>
           <h1 className="mb-4 text-2xl lg:text-3xl font-bold leading-none tracking-tight">{post.title}</h1>
           <div className="prose lg:pb-0 lg:row-span-2">
-            <RichText 
-              content={post.content.raw} 
-              renderers={{
-                p: ({ children }) => <p className="mb-4">{children}</p>,
+            <ReactMarkdown 
+              children={post.content.markdown} 
+              remarkPlugins={[remarkGfm]} 
+              components={{
+                p: ({ children }) => <p className="mb-6">{children}</p>
               }}
-      
             />
           </div>
         </div>

@@ -7,22 +7,7 @@ import ProfileHeader from '@/components/ProfileHeader';
 import { format, parseISO } from "date-fns";
 import { graphCMSImageLoader } from '@/services';
 
-interface ProfileProps {
-  post: {
-    firstName: string;
-    surname: string;
-    doB: any,
-    doP: any,
-    description: string,
-    image: {
-      url: string;
-    };
-    birthPlace: string;
-    restPlace: string;
-  };
-}
-
-const profile: FC<ProfileProps> = ()  => {
+const profile = ()  => {
   const [profile,setProfile]=useState<any>([])
   const [dob,setDob]=useState<any>([])
   const [dop,setDop]=useState<any>([])
