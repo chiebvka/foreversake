@@ -19,6 +19,7 @@ interface ProfileProps {
     };
     birthPlace: string;
     restPlace: string;
+    relation: string; 
   };
 }
 
