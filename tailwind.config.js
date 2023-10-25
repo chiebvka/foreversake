@@ -18,8 +18,8 @@ module.exports = {
         },
       },
       backgroundImage: {
-        "hero": "url('/hero.webp')",
-        "mobile": "url('/mobile_hero.webp')",
+        "hero": "url('/desktops.jpg')",
+        "mobile": "url('/mobiles.jpg')",
         "contact": "url('/contact.webp')",
         "profile": "url('/profile_background.webp')"
       },
