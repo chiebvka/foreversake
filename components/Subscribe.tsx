@@ -3,6 +3,7 @@
 import React, { useState, useEffect, ChangeEvent } from 'react';
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
 import Button from './Button'
+import toast from 'react-hot-toast';
 
 interface FormData {
   email: string;
@@ -40,9 +41,9 @@ export default function Subscribe({}: Props) {
       });
 
       // Handle success (e.g., show a confirmation message)
-      console.log('Message submitted successfully:', data);
+      toast.success('Email submitted successfully');
     } catch (error: any) {
-      setError(error.message as string);
+      toast.error(error.message as string);
     }
   };
 
@@ -67,7 +68,7 @@ export default function Subscribe({}: Props) {
 
       <form action="" onSubmit={handleSubmit} className='w-10/12 mx-auto md:w-full flex flex-col md:flex-row '>
         <input 
-          className="placeholder:text-primary border-2 placeholder:opacity-60 border-primary font-semibold bg-transparent mb-4 w-full md:w-[80%] p-3  cursor-pointer rounded-md text-primary  focus:outline-none focus:ring-0" 
+          className="placeholder:text-primary  placeholder:opacity-60 border-2 border-primary font-semibold bg-transparent mb-4 w-full md:w-[80%] p-3  cursor-pointer rounded-md text-primary  focus:outline-none focus:ring-0" 
           id="email"
           type="email" 
           placeholder='Subscribe to product updates' 

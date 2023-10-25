@@ -1,8 +1,9 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
-import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
+import { Inter } from 'next/font/google';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 import localFont from 'next/font/local';
+import { Toaster } from "react-hot-toast";
 
 const october = localFont({ src: '../public/fonts/hey_october.woff2', variable: "--heading-font" })
 
@@ -28,6 +29,7 @@ export default function RootLayout({
             {children}
           <Footer />
         </main>
+        <Toaster  position="bottom-right" />
       </body>
     </html>
   )
