@@ -2,6 +2,15 @@
 import React, { useState, useEffect, ChangeEvent } from 'react';
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
 import toast from 'react-hot-toast';
+import { Metadata } from "next";
+
+
+
+export const metadata: Metadata = {
+  title: 'Contact us at Foreversake',
+  description: 'Send us a message or send an email',
+};
+
 interface FormData {
   name: string;
   email: string;

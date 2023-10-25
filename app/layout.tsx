@@ -12,6 +12,32 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
   title: 'Foreversake',
   description: 'Preserve, present & celebrate loved ones stories.',
+  appleWebApp: {
+    capable: true,
+    title: 'Foreversake',
+    statusBarStyle: "black-translucent",
+  },
+  icons: {
+    icon: [
+      { url: "/favicons/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicons/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      {
+        url: "/favicons/android-chrome-192x192.png",
+        sizes: "192x192",
+        type: "image/png",
+      },
+      {
+        url: "/favicons/android-chrome-192x192.png",
+        sizes: "192x192",
+        type: "image/png",
+      },
+    ],
+    shortcut: ["/favicons/favicon-32x32.png"],
+    apple: [
+      { url: "/favicons/apple-touch-icon.png" },
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  }
 }
 
 export const dynamic = "force-dynamic";

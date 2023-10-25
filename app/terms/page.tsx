@@ -1,4 +1,12 @@
-import React from 'react'
+import React from 'react';
+import { Metadata } from "next";
+
+
+
+export const metadata: Metadata = {
+  title: 'Terms of Service',
+  description: 'Preserve, present & celebrate loved ones stories.',
+};
 
 const page = () => {
   return (
