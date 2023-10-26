@@ -2,15 +2,16 @@ import { team } from '@/constants';
 
 const Team = () => {
   return (
-    <div className="flex flex-col justify-center items-center px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-      <div className="max-w-xl mb-10 md:mx-auto text-center lg:max-w-2xl md:mb-12">
-        <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-primary sm:text-4xl md:mx-auto">
+    <div className="flex flex-col justify-center items-center px-8 sm:px-20  py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+      <div className="max-w-screen-xl px-4 mb-10 md:mx-auto lg:max-w-2xl md:mb-12">
+        <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-primary">
           Meet our Team
         </h2>
-        <p className="font-light text-white">
+      </div>
+        <p className="font-light text-white mb-16">
           Our team is driven by a shared passion for innovation, creativity, and making a positive impact in the work we do. Get ready to meet the faces behind our collective vision, each of whom plays a vital role in shaping our success and making our projects come to life.
         </p>
-      </div>
+      
       <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
         {team.map((team) => (
         <div

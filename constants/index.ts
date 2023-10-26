@@ -45,7 +45,7 @@ export const team: Team[] = [
     index: 3,
     name: 'Remi Okey Ekwe',
     description: 'A technology oriented electrical engineer with years of applied experience in both project and programme management. Remi is also the  co-founder of Sorach medical services. An entrepreneur with an eye for global technologies  and solutions that add value to humanity, Foreversake was a project that resonated with Remi and instantly grabbed his attention, crafting working partnerships to help bring the project to life.',
-    imageUrl: '/RO_About_Us[2650].webp',
+    imageUrl: '/remi.png',
   },
   {
     index: 4,

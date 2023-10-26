@@ -24,22 +24,22 @@ export default function About({}: Props) {
                     <p>It allowed users to connect, upload media, and share memories of their departed loved ones or pets. Merging a physical digital memorial with a user-friendly app, Foreversake became a conduit for preserving legacies and stories of those who shaped our world. Investors Remi Okey and KC Godwin-Ike propelled the transition from idea to a tangible prototype.</p>
                 </div>
                 <div className="grid grid-cols-2 gap-4 mt-8">
-                    <img className="w-full rounded-2xl" src='about_us_4.webp' alt="office content 1" />
                     <img className="mt-4 w-full lg:mt-10 rounded-2xl" src='about_us_2.webp' alt="office content 2" />
+                    <img className="w-full rounded-2xl" src='about_us_4.webp' alt="office content 1" />
                 </div>
             </div>
 
             </LeftFadeIn>
 
-            <div className="gap-4 items-center py-2 px-4 mx-auto max-w-screen-xl  flex flex-col lg:flex-row-reverse">
-                <div className="flex flex-col text-right lg:text-left justify-start lg:justify-center gap-4 w-[full] lg:w-[50%] lg:h-[50vh] relative lg:sticky top-0">
+            <div className="gap-4 items-center py-2 px-4 mx-auto max-w-screen-xl mt-8 flex flex-col lg:flex-row-reverse">
+                <div className="flex flex-col  lg:text-left justify-start lg:justify-center gap-4 w-[full] lg:w-[50%] lg:h-[50vh] relative lg:sticky top-0">
                     <h1 className='text-4xl tracking-tight font-extrabold text-primary'>
                         Preserve, present & celebrate loved one’s stories.
                     </h1>
                     <p className='font-light text-white'>In the following three years, the Foreversake team meticulously formed partnerships with top-tier suppliers, preparing for market entry. Their dedication to revolutionize remembering loved ones positioned them on the brink of reshaping the memorial industry. Dean Macrae, Stewart Gray, and their team have crafted Foreversake into a promising venture, making memories eternal through technology and ready to redefine how we commemorate those we've lost.</p>
                 </div>
 
-                <div className="w-[full] lg:w-[50%] ">
+                <div className="w-[80%] mt-4 mx-auto flex items-center justify-center lg:w-[50%] ">
                     <Swiper
                         effect={'cards'}
                         grabCursor={true}

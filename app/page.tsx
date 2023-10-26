@@ -10,7 +10,7 @@ export const dynamic = 'force-dynamic'
 export default async function Index() {
   return (
     <>
-      <section id='landing' className='relative w-full h-screen mx-auto bg-mobile md:bg-hero bg-cover bg-no-repeat bg-center mb-6 lg:mb-14' />
+      <section id='landing' className='relative w-full h-[80vh] mx-auto bg-mobile md:bg-hero bg-cover xl:bg-contain bg-no-repeat bg-center  mb-6 md:mb-0' />
       <About />
       <Team />
       <Product />

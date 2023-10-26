@@ -21,13 +21,13 @@ const Product = () => {
             />
           </div>
           </PopAnimation>
-          <div className='flex flex-col justify-center items-center font-light text-white py-4 px-10 w-50% bg-[#9E7F11] bg-opacity-60 rounded-2xl mb-6 mt-14 lg:p-8'>
+          <div className='flex flex-col justify-center items-center font-light text-white p-4 w-50% bg-[#9E7F11] bg-opacity-60 rounded-2xl mb-6 mt-14 lg:p-8'>
             <p className="mb-4">Preserving precious memories is now effortless with Foreversake. Our unique 4x4-inch ornament, crafted from high-quality crystalline epoxy, is available in white with silver marbling or black with white marbling, adorned with our emblem in gold. This enduring tribute symbolizes everlasting love, designed to withstand any weather or environment.</p>
             <p>At the heart of Foreversake lies the power of connection. Using cutting-edge NFC technology, the same technology as contactless payments, a simple tap with any NFC-enable phone connects you to your cherished one's digital memorial. This bridge between the physical and digital realms opens the door to a treasure trove of media and memories.</p>
           </div>
         </div>
         <div className='flex flex-col-reverse lg:flex-col'>
-          <div className='flex flex-col justify-center items-center bg-primary font-light py-4 px-10 w-50% rounded-2xl my-8 lg:p-8'>
+          <div className='flex flex-col justify-center items-center bg-primary font-light p-4 w-50% rounded-2xl my-8 lg:p-8'>
             <p className="mb-4">Our app is a sanctuary for remembrance. Empowering you to create an interactive and collaborative profile for your loved ones. Share all your most precious moments in vivid detail using photographs, videos, audio clips, and memories you note in the app as you remember them.</p>
             <p>Foreversake is more than a Product—it's the foundations of bridges across generations, uniting past and present, and safeguarding the spirit of those we love. Come join us on this heartfelt journey of preserving, presenting, and celebrating the stories of the people who make our worlds turn. Together, we'll make sure the memories of your loved ones always shine.</p>
           </div>
