@@ -53,15 +53,15 @@ const profile = ()  => {
         </div>
         <div className="flex flex-row gap-8 mt-4">
           <div className="flex flex-col items-center justify-center gap-2">
-            <img src="/media_icon.png" alt="logo" className="w-14 h-14 object-cover" />
+            <img src="/media_icon.webp" alt="logo" className="w-14 h-14 object-cover" />
             <p className="text-white font-medium text-xs">Family Media</p>
           </div>
           <div className="flex flex-col items-center justify-center gap-2">
-            <img src="/memories_icon.png" alt="logo" className="w-14 h-14 object-cover" />
+            <img src="/memories_icon.webp" alt="logo" className="w-14 h-14 object-cover" />
             <p className="text-white font-medium text-xs">Memories</p>
           </div>
           <div className="flex flex-col items-center justify-center gap-2">
-            <img src="/messaging_icon.png" alt="logo" className="w-14 h-14 object-cover" />
+            <img src="/messaging_icon.webp" alt="logo" className="w-14 h-14 object-cover" />
             <p className="text-white font-medium text-xs">Messages</p>
           </div>
         </div>

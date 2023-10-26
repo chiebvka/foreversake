@@ -34,7 +34,7 @@ const ProfileHeader = ({type}: Props) => {
   return (
     <div className='w-full flex items-center justify-between mb-4'>
       <AiOutlineLeft className='w-5 h-5 text-primary'/>
-      <img src="/Foreversake_Logo_Realism.png" alt="logo" className="w-16 h-16 object-contain" />
+      <img src="/Foreversake_Logo_Realism.webp" alt="logo" className="w-16 h-16 object-contain" />
       {type == 'home' && <IconRenderer type='home'/>}
       {type == 'vault' && <IconRenderer type='vault'/>}
       {type == 'save' && <IconRenderer type='save'/>}
