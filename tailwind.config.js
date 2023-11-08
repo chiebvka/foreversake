@@ -19,7 +19,7 @@ module.exports = {
       },
       backgroundImage: {
         "hero": "url('/desktops.jpg')",
-        "mobile": "url('/mobiles.jpg')",
+        "mobile": "url('/mobile-beta.png')",
         "contact": "url('/contact.webp')",
         "profile": "url('/profile_background.webp')"
       },
