@@ -57,7 +57,7 @@ export default function About({}: Props) {
                         </SwiperSlide>
                         <SwiperSlide>
                             <Image
-                            src="/about_us_3.webp"
+                            src="/swipers1.jpeg"
                             width={250}
                             height={350}
                             className=''
@@ -66,7 +66,7 @@ export default function About({}: Props) {
                         </SwiperSlide>
                         <SwiperSlide>
                             <Image
-                            src="/about_us_5.webp"
+                            src="/swipers2.jpeg"
                             width={250}
                             height={350}
                             className=''
@@ -75,7 +75,7 @@ export default function About({}: Props) {
                         </SwiperSlide>
                         <SwiperSlide>
                             <Image
-                            src="/about_us_6.webp"
+                            src="/swipers3.jpeg"
                             width={250}
                             height={350}
                             className=''

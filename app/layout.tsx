@@ -4,6 +4,8 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import localFont from 'next/font/local';
 import { Toaster } from "react-hot-toast";
+import GoogleAnalytics from '@/components/GoogleAnalytics';
+import CookieBanner from '@/components/CookieBanner';
 
 const october = localFont({ src: '../public/fonts/hey_october.woff2', variable: "--heading-font" })
 
@@ -49,11 +51,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <GoogleAnalytics GA_MEASUREMENT_ID='G-BL5RW4QRP7' />
       <body className='h-full bg-background'>
         <main className={`${inter.className} ${october.variable} w-full h-full bg-background flex flex-col items-center`}>
           <Navbar />
             {children}
           <Footer />
+            <CookieBanner />
         </main>
         <Toaster  position="bottom-right" />
       </body>
