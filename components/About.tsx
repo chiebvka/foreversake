@@ -20,8 +20,14 @@ export default function About({}: Props) {
             <div className="gap-16 items-center px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:pb-8 lg:px-6">
                 <div className="font-light text-white">
                     <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-primary">Changing the way we remember</h2>
-                    <p className="mb-4">Foreversake emerged in Scotland in 2020, envisioned by Dean Macrae and Stewart Gray to immortalize lost loved ones using a digital memorial accessible to all, a potential revolution in the memorial industry. Dean's enduring desire to honor departed friends, family, and pets drove their shared mission, resulting in a device uniting families globally.</p>
-                    <p>It allowed users to connect, upload media, and share memories of their departed loved ones or pets. Merging a physical digital memorial with a user-friendly app, Foreversake became a conduit for preserving legacies and stories of those who shaped our world. Investors Remi Okey and KC Godwin-Ike propelled the transition from idea to a tangible prototype.</p>
+                    <p className="mb-4">
+                        Foreversake emerged in Scotland in 2020, envisioned by Dean Macrae and Stewart Gray 
+                        to immortalize lost loved ones using a digital memorial accessible to all, a potential revolution in the memorial industry.
+                        Combining Dean's desire to honor departed friends, family, and pets and Stewarts passion for technology and business; 
+                        A transformative partnership was forged, 
+                        resulting in a revolutionary device built to bring family and friends together globally.
+                    </p>
+                    {/* <p>It allowed users to connect, upload media, and share memories of their departed loved ones or pets. Merging a physical digital memorial with a user-friendly app, Foreversake became a conduit for preserving legacies and stories of those who shaped our world. Investors Remi Okey and KC Godwin-Ike propelled the transition from idea to a tangible prototype.</p> */}
                 </div>
                 <div className="grid grid-cols-2 gap-4 mt-8">
                     <img className="mt-4 w-full lg:mt-10 rounded-2xl" src='about_us_2.webp' alt="office content 2" />
