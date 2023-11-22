@@ -1,26 +1,30 @@
 "use client" 
 
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import Image from 'next/image';
 import { LeftFadeIn } from '@/utils/motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-cards';
 
-import { EffectCards } from 'swiper/modules';
+import { EffectCards, Autoplay } from 'swiper/modules';
+import localFont from 'next/font/local';
+const october = localFont({ src: '../public/fonts/hey_october.woff2', variable: "--heading-font" })
 
 
 type Props = {}
 
 export default function About({}: Props) {
+
+   
   return (
-        <section id='about' className='flex flex-col lg:pb-14 px-8 sm:px-20 justify-center'>
+        <section id='about' className='flex flex-col justify-center  items-center lg:pb-14 px-12 lg:px-8  '>
             <LeftFadeIn>
 
-            <div className="gap-16 items-center px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:pb-8 lg:px-6">
+            <div className="gap-4  w-full items-center md:px-4 mx-auto lg:grid lg:grid-cols-2 lg:pb-8 ">
                 <div className="font-light text-white">
-                    <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-primary">Changing the way we remember</h2>
-                    <p className="mb-4">
+                    <h2 className={`${october.className} mb-4 md:text-4xl text-2xl text-center tracking-tight font-extrabold text-primary`}>Changing the way we remember</h2>
+                    <p className="mb-4 md:text-lg ">
                         Foreversake emerged in Scotland in 2020, envisioned by Dean Macrae and Stewart Gray 
                         to immortalize lost loved ones using a digital memorial accessible to all, a potential revolution in the memorial industry.
                         Combining Dean's desire to honor departed friends, family, and pets and Stewarts passion for technology and business; 
@@ -37,19 +41,24 @@ export default function About({}: Props) {
 
             </LeftFadeIn>
 
-            <div className="gap-4 items-center py-2 px-4 mx-auto max-w-screen-xl mt-8 flex flex-col lg:flex-row-reverse">
+            <div className="gap-4 items-center py-2 md:px-4 mx-auto  mt-8 flex flex-col lg:flex-row-reverse">
                 <div className="flex flex-col  lg:text-left justify-start lg:justify-center gap-4 w-[full] lg:w-[50%] lg:h-[50vh] relative lg:sticky top-0">
-                    <h1 className='text-4xl tracking-tight font-extrabold text-primary'>
+                    <h1 className={`${october.className} mb-4 md:text-4xl text-2xl text-center tracking-tight font-extrabold text-primary`}>
                         Preserve, present & celebrate loved one’s stories.
                     </h1>
-                    <p className='font-light text-white'>In the following three years, the Foreversake team meticulously formed partnerships with top-tier suppliers, preparing for market entry. Their dedication to revolutionize remembering loved ones positioned them on the brink of reshaping the memorial industry. Dean Macrae, Stewart Gray, and their team have crafted Foreversake into a promising venture, making memories eternal through technology and ready to redefine how we commemorate those we've lost.</p>
+                    <p className='font-light md:text-lg text-white'>In the following three years, the Foreversake team meticulously formed partnerships with top-tier suppliers, preparing for market entry. Their dedication to revolutionize remembering loved ones positioned them on the brink of reshaping the memorial industry. Dean Macrae, Stewart Gray, and their team have crafted Foreversake into a promising venture, making memories eternal through technology and ready to redefine how we commemorate those we've lost.</p>
                 </div>
 
-                <div className="w-[80%] mt-4 mx-auto flex items-center justify-center lg:w-[50%] ">
+                <div className="w-full mt-4 mx-auto flex items-center justify-center lg:w-[50%] ">
                     <Swiper
                         effect={'cards'}
                         grabCursor={true}
-                        modules={[EffectCards]}
+                        modules={[EffectCards, Autoplay]}
+                        autoplay={{
+                            delay: 1000,
+                            disableOnInteraction: false,
+                          }}
+                        // onAutoplayTimeLeft={onAutoplayTimeLeft}
                         className="mySwiper"
                     >
                         <SwiperSlide>
@@ -57,7 +66,7 @@ export default function About({}: Props) {
                             src="/about_us_1.webp"
                             width={250}
                             height={350}
-                            className=''
+                            className='object-cover h-96 w-96'
                             alt="About Us Image"
                             />
                         </SwiperSlide>
@@ -66,7 +75,7 @@ export default function About({}: Props) {
                             src="/swipers1.jpeg"
                             width={250}
                             height={350}
-                            className=''
+                            className='object-cover h-96 w-96'
                             alt="About Us Image"
                             />
                         </SwiperSlide>
@@ -75,7 +84,7 @@ export default function About({}: Props) {
                             src="/swipers2.jpeg"
                             width={250}
                             height={350}
-                            className=''
+                            className='object-cover h-96 w-96'
                             alt="About Us Image"
                             />
                         </SwiperSlide>
@@ -84,10 +93,43 @@ export default function About({}: Props) {
                             src="/swipers3.jpeg"
                             width={250}
                             height={350}
-                            className=''
+                            className='object-cover h-96 w-96'
                             alt="About Us Image"
                             />
                         </SwiperSlide>
+                        <SwiperSlide>
+                            <Image
+                            src="/swipers4.jpg"
+                            width={250}
+                            height={350}
+                            className='object-cover h-96 w-96'
+                            alt="About Us Image"
+                            />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <Image
+                            src="/swipers5.jpg"
+                            width={250}
+                            height={350}
+                            className='object-cover h-96 w-96'
+                            alt="About Us Image"
+                            />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <Image
+                            src="/swipers6.jpg"
+                            width={250}
+                            height={350}
+                            className='object-cover h-96 w-96'
+                            alt="About Us Image"
+                            />
+                        </SwiperSlide>
+                        {/* <div className="autoplay-progress" slot="container-end">
+                        <svg viewBox="0 0 48 48" ref={progressCircle}>
+                            <circle cx="24" cy="24" r="20"></circle>
+                        </svg>
+                        <span ref={progressContent}></span>
+                        </div> */}
                     </Swiper>
                     {/* <div className='xl:h-[35vh] lg:h-[45vh] pl-0 pr-4 lg:pr-24'>
                         <Image

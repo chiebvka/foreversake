@@ -2,12 +2,20 @@
 
 import React, { useState, useEffect, ChangeEvent } from 'react';
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
-import Button from './Button'
+// import Button from './Button'
 import toast from 'react-hot-toast';
+import { Input } from './ui/input';
+import { Button } from './ui/button';
+
+import localFont from 'next/font/local';
+const october = localFont({ src: '../public/fonts/hey_october.woff2', variable: "--heading-font" })
+
 
 interface FormData {
   email: string;
 }
+
+
 
 type Props = {}
 
@@ -55,20 +63,20 @@ export default function Subscribe({}: Props) {
   }, [error]);
 
   return (
-    <div className='flex flex-col justify-center w-full text-white'>
-      <div className='flex flex-col items-center justify-center gap-8 bg-contact bg-cover bg-no-repeat bg-center h-[60vh]'> 
-        <h1 className="text-center uppercase text-md md:text-lg lg:text-xl font-medium">
+    <div className='flex flex-col justify-center w-full text-white bg-contact bg-cover bg-no-repeat bg-center h-[40vh]'>
+      <div className='flex flex-col items-center justify-center w-10/12 mx-auto space-y-8 '> 
+        <h1 className={`${october.className} text-center md:text-4xl text-2xl text-primary font-medium`}>
           Interested in our product?
         </h1>
 
-        <p className='text-center'>
+        <p className='text-center font-light text-sm md:text-lg'>
           Sign up for email updates to show your interest in Foreversake and
-          <br /> to keep up to date with our progress!
+           to keep up to date with our progress!
         </p>
 
-      <form action="" onSubmit={handleSubmit} className='w-10/12 mx-auto md:w-full flex flex-col md:flex-row '>
-        <input 
-          className="placeholder:text-primary  placeholder:opacity-60 border-2 border-primary font-semibold bg-transparent mb-4 w-full md:w-[80%] p-3  cursor-pointer rounded-md text-primary  focus:outline-none focus:ring-0" 
+      <form action="" onSubmit={handleSubmit} className=' flex w-full items-center justify-center'>
+        <Input 
+          className="md:mr-2 mr-1 border-primary placeholder:text-primary placeholder:text-sm placeholder:opacity-70" 
           id="email"
           type="email" 
           placeholder='Subscribe to product updates' 
@@ -76,7 +84,7 @@ export default function Subscribe({}: Props) {
           onChange={handleChange}
           required={true}
         />
-          <button type="submit" className="py-3 px-5 md:ml-2 md:mb-4 text-sm border-2 border-primary bg-primary font-medium text-center text-foreground rounded-lg sm:w-fit focus:outline-none focus:ring-primary-300  hover:scale-110 focus:ring-yellow-500">Send message</button>
+          <Button type="submit" className="  ">Submit</Button>
       </form>
        
       </div>

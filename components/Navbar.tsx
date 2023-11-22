@@ -5,6 +5,10 @@ import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { Dialog } from '@headlessui/react';
 import Link from 'next/link';
 
+import localFont from 'next/font/local';
+const october = localFont({ src: '../public/fonts/hey_october.woff2', variable: "--heading-font" })
+
+
 type Props = {}
 
 export default function Navbar({}: Props) {
@@ -61,7 +65,7 @@ export default function Navbar({}: Props) {
                     key={item.name}
                     href={item.href} 
                     onClick={() => setMobileMenuOpen(false)}
-                    className="-mx-3 block px-3 py-2 leading-7 text-primary"
+                    className={`${october.className} -mx-3 block px-3 py-2 md:text-4xl text-2xl leading-7 text-primary`}
                   >
                     {item.name}
                   </Link>

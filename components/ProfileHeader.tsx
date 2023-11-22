@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react'
 import { AiOutlineLeft, AiOutlinePlusCircle } from 'react-icons/ai';
 import { BsPencil } from "react-icons/bs";
@@ -33,9 +34,13 @@ const IconRenderer = ({ type }: Props) => {
 const ProfileHeader = ({type}: Props) => {
   return (
     <div className='w-full flex items-center justify-between mb-4'>
-      <AiOutlineLeft className='w-5 h-5 text-primary'/>
+      <Link href="/home/profile">
+        <AiOutlineLeft className='w-5 h-5 text-primary'/>
+      </Link>
       <img src="/Foreversake_Logo_Realism.webp" alt="logo" className="w-16 h-16 object-contain" />
-      {type == 'home' && <IconRenderer type='home'/>}
+      <Link href="/home/profile/edit">
+        {type == 'home' && <IconRenderer type='home'/>}
+      </Link>
       {type == 'vault' && <IconRenderer type='vault'/>}
       {type == 'save' && <IconRenderer type='save'/>}
     </div>

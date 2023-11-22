@@ -6,6 +6,7 @@ import { getProfile } from "@/services";
 import ProfileHeader from '@/components/ProfileHeader';
 import { format, parseISO } from "date-fns";
 import { graphCMSImageLoader } from '@/services';
+import Link from "next/link";
 
 const profile = ()  => {
   const [profile,setProfile]=useState<any>([])
@@ -53,8 +54,10 @@ const profile = ()  => {
         </div>
         <div className="flex flex-row gap-8 mt-4">
           <div className="flex flex-col items-center justify-center gap-2">
-            <img src="/media_icon.webp" alt="logo" className="w-14 h-14 object-cover" />
-            <p className="text-white font-medium text-xs">Family Media</p>
+            <Link href="/home/profile/vault">
+              <img src="/media_icon.webp" alt="logo" className="w-14 h-14 object-cover" />
+              <p className="text-white font-medium text-xs">Family Media</p>
+            </Link>
           </div>
           <div className="flex flex-col items-center justify-center gap-2">
             <img src="/memories_icon.webp" alt="logo" className="w-14 h-14 object-cover" />

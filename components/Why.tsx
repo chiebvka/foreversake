@@ -1,10 +1,13 @@
 import { reason } from '@/constants';
+import localFont from 'next/font/local';
+const october = localFont({ src: '../public/fonts/hey_october.woff2', variable: "--heading-font" })
+
 
   const Why = () => {
     return (
       <div className="px-8 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
         <div className="max-w-screen-xl mb-10 md:text-center md:mx-auto px-4 lg:max-w-2xl md:mb-24">
-          <h2 className="max-w-lg mb-6 font-sans text-4xl font-bold leading-none tracking-tight text-primary sm:text-4xl md:mx-auto">
+          <h2 className={`${october.className} max-w-lg mb-6 font-sans md:text-4xl text-2xl text-center font-bold leading-none tracking-tight text-primary sm:text-4xl md:mx-auto`}>
             Why Foreversake
           </h2>
         </div>

@@ -140,6 +140,7 @@ export const footerLinks: footerLinks[] = [
     name: "Contact",
     link: "contact",
   },
+
   {
     index: 4,
     name: "Terms of Service",
@@ -147,6 +148,11 @@ export const footerLinks: footerLinks[] = [
   },
   {
     index: 5,
+    name: "Cookies",
+    link: "cookies",
+  },
+  {
+    index: 6,
     name: "Privacy Policy",
     link: "privacy",
   },
@@ -160,7 +166,23 @@ export const socialMedia: socialMedia[] = [
   },
   {
     id: 2,
+    icon: "/youtube.svg",
+    link: "https://www.youtube.com/@foreversake",
+  },
+  {
+    id: 3,
+    icon: "/instagram.svg",
+    link: "https://www.instagram.com/foreversake/",
+  },
+  {
+    id: 4,
+    icon: "/tiktok.svg",
+    link: "https://www.tiktok.com/@foreversake?_t=8hUqZTUyftA&_r=1",
+  },
+  {
+    id: 5,
     icon: "/linkedin.svg",
     link: "https://www.linkedin.com/company/91585390",
   },
+
 ]
