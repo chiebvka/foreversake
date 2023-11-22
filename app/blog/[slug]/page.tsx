@@ -10,7 +10,7 @@ export default async function PostDetails({ params }: {params: any}) {
   
   return (
     <>
-      <div className="container mx-auto px-10 mb-8">
+      <div className=" mx-auto px-10 mb-8 md:max-w-full lg:max-w-screen-xl ">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="col-span-1 lg:col-span-8">
             <PostDetail post={post} />

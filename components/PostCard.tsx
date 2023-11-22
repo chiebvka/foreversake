@@ -4,10 +4,11 @@ import React, { FC } from 'react';
 import Image from 'next/image';
 import { format, parseISO } from 'date-fns';
 import Link from 'next/link';
-import Button from './Button';
+
 
 import { getPosts } from '@/services';
 import { graphCMSImageLoader } from '@/services';
+import { Button } from './ui/button';
 
 interface PostCardProps {
   post: {
@@ -40,7 +41,7 @@ const PostCard: FC<PostCardProps> = ({ post }) => (
     </div> 
 
     <div className='mx-4'>
-      <h1 className="transition duration-700 my-4 cursor-pointer text-2xl lg:text-3xl font-bold leading-none tracking-tight">
+      <h1 className="transition duration-700 my-4 cursor-pointer text-2xl lg:text-3xl text-primary font-bold leading-none tracking-tight">
         <Link href={`/blog/${post.slug}`}>{post.title}</Link>
       </h1>
       <div className=" flex flex-col lg:flex-row mb-4 w-full">
@@ -54,7 +55,7 @@ const PostCard: FC<PostCardProps> = ({ post }) => (
             className="align-middle rounded-full"
             src={post.author.photo.url}
           />
-          <p className="inline align-middle text-gray-700 ml-2 font-medium xs:text-lg">{post.author.name}</p>
+          <p className="inline align-middle text-gray-700 ml-2 font-bold xs:text-lg">{post.author.name}</p>
         </div>
         <div className="font-medium text-gray-700 flex items-center">
           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 inline mr-2 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -68,7 +69,7 @@ const PostCard: FC<PostCardProps> = ({ post }) => (
       </p>
       <div className="text-center my-4">
         <Link href={`/blog/${post.slug}`}>
-          <Button text={"Continue Reading..."}/>
+          <Button>Read More</Button>
         </Link>
       </div>
     </div>

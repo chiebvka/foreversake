@@ -23,7 +23,7 @@ export default function CategoryPage({ params }: {params: any}) {
 
   return (
     posts.length !== 0 ? 
-      <div className="container mx-auto px-10 mb-8">
+      <div className=" mx-auto px-10 mb-8 md:max-w-full lg:max-w-screen-xl ">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-8 col-span-1">
           {posts.map((post: { node: any }, index: number) => (
@@ -38,7 +38,7 @@ export default function CategoryPage({ params }: {params: any}) {
         </div>
       </div>
       : 
-      <div className="container mx-auto px-10 mb-8">
+      <div className=" mx-auto px-10 mb-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-8 col-span-1 text-white flex justify-center items-center">
             No blogs in this category 

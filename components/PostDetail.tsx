@@ -47,7 +47,7 @@ const PostDetail: FC<PostDetailProps> = ({ post }) => {
                 className="align-middle rounded-full"
                 src={post.author.photo.url}
               />
-              <p className="inline align-middle text-gray-700 ml-2 font-medium text-lg">{post.author.name}</p>
+              <p className="inline align-middle text-gray-700 ml-2 font-bold text-lg">{post.author.name}</p>
             </div>
             <div className="font-medium text-gray-700">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 inline mr-2 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -56,13 +56,13 @@ const PostDetail: FC<PostDetailProps> = ({ post }) => {
               <span className="align-middle text-sm xs:text-base">{format(parseISO(post.createdAt), 'MMM do, yyyy')}</span>
             </div>
           </div>
-          <h1 className="mb-4 text-2xl lg:text-3xl font-bold leading-none tracking-tight">{post.title}</h1>
-          <div className="prose lg:pb-0 lg:row-span-2">
+          <h1 className="mb-4 text-2xl lg:text-3xl font-bold leading-none text-primary tracking-tight">{post.title}</h1>
+          <div className="prose lg:pb-0 text-black lg:row-span-2">
             <ReactMarkdown 
               children={post.content.markdown} 
               remarkPlugins={[remarkGfm]} 
               components={{
-                p: ({ children }) => <p className="mb-6">{children}</p>
+                p: ({ children }) => <p className="mb-6 text-black">{children}</p>
               }}
             />
           </div>

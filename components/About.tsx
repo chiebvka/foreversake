@@ -18,7 +18,7 @@ export default function About({}: Props) {
 
    
   return (
-        <section id='about' className='flex flex-col justify-center  items-center lg:pb-14 px-12 lg:px-8  '>
+        <section id='about' className='flex flex-col justify-center  items-center md:max-w-full lg:max-w-screen-xl lg:pb-14 px-12 lg:px-8  '>
             <LeftFadeIn>
 
             <div className="gap-4  w-full items-center md:px-4 mx-auto lg:grid lg:grid-cols-2 lg:pb-8 ">
@@ -68,6 +68,8 @@ export default function About({}: Props) {
                             height={350}
                             className='object-cover h-96 w-96'
                             alt="About Us Image"
+                            unoptimized
+                            
                             />
                         </SwiperSlide>
                         <SwiperSlide>
@@ -77,6 +79,8 @@ export default function About({}: Props) {
                             height={350}
                             className='object-cover h-96 w-96'
                             alt="About Us Image"
+                            unoptimized
+                            
                             />
                         </SwiperSlide>
                         <SwiperSlide>
@@ -86,6 +90,8 @@ export default function About({}: Props) {
                             height={350}
                             className='object-cover h-96 w-96'
                             alt="About Us Image"
+                            unoptimized
+                            
                             />
                         </SwiperSlide>
                         <SwiperSlide>
@@ -95,15 +101,8 @@ export default function About({}: Props) {
                             height={350}
                             className='object-cover h-96 w-96'
                             alt="About Us Image"
-                            />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <Image
-                            src="/swipers4.jpg"
-                            width={250}
-                            height={350}
-                            className='object-cover h-96 w-96'
-                            alt="About Us Image"
+                            unoptimized
+                            
                             />
                         </SwiperSlide>
                         <SwiperSlide>
@@ -113,6 +112,19 @@ export default function About({}: Props) {
                             height={350}
                             className='object-cover h-96 w-96'
                             alt="About Us Image"
+                            unoptimized
+                            
+                            />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <Image
+                            src="/swipers4.jpg"
+                            width={250}
+                            height={350}
+                            className='object-cover h-96 w-96'
+                            alt="About Us Image"
+                            unoptimized
+                            
                             />
                         </SwiperSlide>
                         <SwiperSlide>
@@ -122,6 +134,8 @@ export default function About({}: Props) {
                             height={350}
                             className='object-cover h-96 w-96'
                             alt="About Us Image"
+                            unoptimized
+                            
                             />
                         </SwiperSlide>
                         {/* <div className="autoplay-progress" slot="container-end">

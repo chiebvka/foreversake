@@ -24,23 +24,23 @@ const PostWidget: React.FC<PostWidgetProps> = ({ categories, slug }) => {
 
   return (
     <div className="bg-white shadow-lg rounded-lg p-8">
-      <h3 className="text-xl font-semibold border-b pb-4">Latest Posts</h3>
+      <h3 className="text-xl font-semibold text-black border-b pb-4">Latest Posts</h3>
       {recentPosts.map((post, index) => (
         <div key={index} className="flex items-center w-full mb-4">
-          <div className="w-16 flex-none">
+          <div className="w-16 flex-none ">
             <Image
               loader={graphCMSImageLoader}
               alt={post.title}
               height="60"
               width="60"
               unoptimized
-              className="align-middle rounded-full"
+              className="align-middle rounded-full  "
               src={post.featuredImage.url}
             />
           </div>
           <div className="flex-grow ml-4">
             <p className="text-gray-600 text-sm">{format(parseISO(post.createdAt), 'MMM do, yyyy')}</p>
-            <Link href={`/blog/${post.slug}`} className="text-sm" key={index}>{post.title}</Link>
+            <Link href={`/blog/${post.slug}`} className="text-sm text-primary" key={index}>{post.title}</Link>
           </div>
         </div>
       ))}

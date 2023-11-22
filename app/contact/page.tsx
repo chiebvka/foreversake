@@ -68,7 +68,7 @@ const ContactForm = () => {
   }, [error]);
 
   return (
-    <div className=" w md:w-10/12 my-24 mx-auto ">
+    <div className=" w md:w-10/12 my-24 mx-auto md:max-w-full lg:max-w-screen-xl ">
 
   <section className="mb-32">
     <div className="relative h-[340px] overflow-hidden border border-primary rounded bg-cover bg-[50%] bg-no-repeat  shadow-[0_4px_9px_-4px_#3b71ca] bg-[url('/contact_img.png')]"></div>

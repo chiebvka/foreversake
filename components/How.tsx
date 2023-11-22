@@ -116,28 +116,29 @@ export default function How() {
           </div>
 
           <div className="hidden md:grid md:grid-cols-3 gap-5  ">
+           <Image
+                src={black2}
+                className="border-primary rounded-lg "
+                alt="How_1"
+              />
             <Image
               src={black1}
               className="border-primary rounded-lg "
               alt="How_1"
             />
-            <Image
-              src={black2}
-              className="border-primary rounded-lg "
-              alt="How_1"
-            />
+      
             <Image
               src={black3}
               className="border-primary rounded-lg "
               alt="How_1"
             />
             <Image
-              src={white1}
+              src={white2}
               className="border-primary rounded-lg "
               alt="How_1"
             />
             <Image
-              src={white2}
+              src={white1}
               className="border-primary rounded-lg "
               alt="How_1"
             />
