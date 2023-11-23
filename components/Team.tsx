@@ -18,7 +18,7 @@ const Team = () => {
       <div className="grid gap-20 md:gap-3 sm:grid-cols-2 lg:grid-cols-4">
         {team.map((team) => (
           <div className="relative flex flex-col group transition duration-300 ease-in-out rounded-xl border bg-[#222121] shadow-[0_4px_9px_-4px_#3b71ca] bg-clip-border ">
-            <div className="relative mx-4 -mt-6 h-56 md:h-auto md:-mt-16 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40">
+            <div className="relative mx-4 -mt-10 h-56 md:h-auto md:-mt-16 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40">
               <img
                 className="object-cover  w-full h-full"
                 src={team.imageUrl}
@@ -30,7 +30,7 @@ const Team = () => {
               <h5 className="mb-2 text-xl md:text-2xl font-semibold text-primary leading-snug tracking-normal text-blue-gray-900 antialiased">
                 {team.name}
               </h5>
-              <p className="text-xs md:text-sm lg:text-base font-light leading-relaxed text-inherit antialiased">
+              <p className="text-xs md:text-sm lg:text-base font-light leading-relaxed text-white antialiased">
               {team.description}
               </p>
             </div>

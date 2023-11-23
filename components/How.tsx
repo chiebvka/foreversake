@@ -31,7 +31,7 @@ const Pointer = ({number}: Props) => {
     return(
       <div className="flex flex-col items-center md:px-4 mr-4">
         <div>
-          <div className="flex items-center justify-center w-10 h-10 border border-foreground rounded-full text-primary">
+          <div className="flex items-center justify-center w-10 h-10 border border-white rounded-full text-primary">
             {number}
           </div>
         </div>

@@ -26,9 +26,9 @@ const Product = () => {
           </div>
           </PopAnimation>
         </div>
-        <div className='flex  flex-col-reverse lg:flex-col'>
+        <div className='flex  flex-col lg:flex-col'>
           <div className='flex flex-col justify-center items-center font-light w-full rounded-2xl  '>
-            <p className="mb-4 md:text-lg">Our app is a sanctuary for remembrance. Empowering you to create an interactive and collaborative profile for your loved ones. Share all your most precious moments in vivid detail using photographs, videos, audio clips, and memories you note in the app as you remember them.</p>
+            <p className="mb-4 text-white md:text-lg">Our app is a sanctuary for remembrance. Empowering you to create an interactive and collaborative profile for your loved ones. Share all your most precious moments in vivid detail using photographs, videos, audio clips, and memories you note in the app as you remember them.</p>
             <p>Foreversake is more than a Product—it's the foundations of bridges across generations, uniting past and present, and safeguarding the spirit of those we love. Come join us on this heartfelt journey of preserving, presenting, and celebrating the stories of the people who make our worlds turn. Together, we'll make sure the memories of your loved ones always shine.</p>
           </div>
           <div className='flex justify-center items-center w-full  lg:mx-8'>
