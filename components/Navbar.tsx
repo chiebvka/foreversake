@@ -16,6 +16,7 @@ export default function Navbar({}: Props) {
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'Blog', href: '/blog' },
+    { name: 'Contact Us', href: '/contact' },
   ]
 
   return (
@@ -65,7 +66,7 @@ export default function Navbar({}: Props) {
                     key={item.name}
                     href={item.href} 
                     onClick={() => setMobileMenuOpen(false)}
-                    className={`${october.className} -mx-3 block px-3 py-2 md:text-4xl text-2xl leading-7 text-primary`}
+                    className={`${october.className} -mx-3 block px-3 py-2 md:text-5xl text-2xl leading-7 text-primary`}
                   >
                     {item.name}
                   </Link>

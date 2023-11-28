@@ -80,7 +80,7 @@ const ContactForm = () => {
               <div className="relative mb-6" data-te-input-wrapper-init>
                 <input 
                   type="text"
-                  className="peer block min-h-[auto] border  w-full rounded  bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                  className="peer block min-h-[auto] border border-primary  w-full rounded  bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                   id="name" 
                   placeholder='Your name'
                   value={formData.name}
@@ -95,7 +95,7 @@ const ContactForm = () => {
               <div className="relative mb-6" data-te-input-wrapper-init>
                 <input 
                   type="email"
-                  className="peer block min-h-[auto] w-full rounded border bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                  className="peer block min-h-[auto] w-full rounded border border-primary bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                   id="email"
                   required 
                   placeholder='Your email'
@@ -110,7 +110,7 @@ const ContactForm = () => {
               <div className="relative mb-6" data-te-input-wrapper-init>
                 <input 
                   type="number"
-                  className="peer block min-h-[auto] w-full rounded border bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                  className="peer block min-h-[auto] w-full rounded border border-primary bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                   id="mobile"
                   required 
                   placeholder='Your mobile number'
@@ -124,7 +124,7 @@ const ContactForm = () => {
               </div>
               <div className="relative mb-6" data-te-input-wrapper-init>
                 <textarea
-                  className="peer block min-h-[auto] w-full rounded border bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                  className="peer block min-h-[auto] w-full rounded border border-primary bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                   id="message" 
                   rows={5} 
                   placeholder="Leave a comment..."
@@ -165,10 +165,10 @@ const ContactForm = () => {
                     </div>
                   </div>
                   <div className="ml-6 grow">
-                    <p className="mb-2 font-bold dark:text-white">
+                    <p className="mb-2 font-bold text-primary">
                       Address
                     </p>
-                    <p className="text-neutral-500 dark:text-neutral-200">
+                    <p className="text-neutral-200">
                     Foreversake Ltd, 21 Morar Court, Glenrothes, Fife, KY6 2BT
                     </p>
                   </div>
@@ -184,10 +184,10 @@ const ContactForm = () => {
                     </div>
                   </div>
                   <div className="ml-6 grow">
-                    <p className="mb-2 font-bold dark:text-white">
+                    <p className="mb-2 font-bold text-primary">
                       Mobile
                     </p>
-                    <p className="text-neutral-500 dark:text-neutral-200">
+                    <p className="text-neutral-200">
                       <a href="tel:+447514617058">
                         +44 7514617058
                       </a>
@@ -206,8 +206,8 @@ const ContactForm = () => {
                     </div>
                   </div>
                   <div className="ml-6 grow">
-                    <p className="mb-2 font-bold dark:text-white">Email</p>
-                    <div className="text-neutral-500 dark:text-neutral-200">
+                    <p className="mb-2 font-bold text-primary">Email</p>
+                    <div className="text-neutral-200">
                       <a href="mailto:info@foreversake.com">
                         info@foreversake.com
                       </a>

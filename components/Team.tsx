@@ -7,7 +7,7 @@ const Team = () => {
   return (
     <div className="flex flex-col justify-center items-center px-12 sm:px-20  py-16 mx-auto md:max-w-full lg:max-w-screen-xl  md:px-24 lg:px-8 lg:py-20">
       <div className="max-w-screen-xl px-4  md:mx-auto lg:max-w-2xl md:mb-12">
-        <h2 className={`${october.className} mb-4 md:text-4xl text-2xl text-center tracking-tight font-extrabold text-primary`}>
+        <h2 className={`${october.className} mb-4 md:text-6xl text-2xl text-center tracking-tight font-extrabold text-primary`}>
           Meet our Team
         </h2>
       </div>

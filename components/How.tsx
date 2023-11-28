@@ -169,6 +169,13 @@ export default function How() {
           modules={[ Pagination]}
           className="mySwiper swipers "
         >
+           <SwiperSlide>
+              <Image
+                src={black2}
+                className="border-primary rounded-lg "
+                alt="How_1"
+              />
+          </SwiperSlide>
           <SwiperSlide>
               <Image
                 src={black1}
@@ -176,13 +183,7 @@ export default function How() {
                 alt="How_1"
               />
           </SwiperSlide>
-          <SwiperSlide>
-              <Image
-                src={black2}
-                className="border-primary rounded-lg "
-                alt="How_1"
-              />
-          </SwiperSlide>
+
           <SwiperSlide>
               <Image
                 src={black3}
@@ -192,14 +193,14 @@ export default function How() {
           </SwiperSlide>
           <SwiperSlide>
               <Image
-                src={white1}
+                src={white2}
                 className="border-primary rounded-lg "
                 alt="How_1"
               />
           </SwiperSlide>
           <SwiperSlide>
               <Image
-                src={white2}
+                src={white1}
                 className="border-primary rounded-lg "
                 alt="How_1"
               />

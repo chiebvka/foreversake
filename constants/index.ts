@@ -38,7 +38,7 @@ export const team: Team[] = [
   {
     index: 2,
     name: 'Stewart Gray',
-    description: 'Owner of Kaber Helm Software Solutions, Stewart’s background is embedded in operations and utilising data to streamline processes before moving into software development to support businesses. Passionate about technology, it’s growing applications in everyday life and the value it brings to those who use it…  This project lends itself to both Stewarts personal interests and his company’s strengths.',
+    description: 'With a background embedded in operations and utilising data to streamline processes, Stewart Built his career in manufacturing before running his own software development company. Following his burning passion for technology, it’s growing applications in everyday life and the value it brings to those who use it. This project lends itself to both Stewarts personal interests and his professional skills and experiences.',
     imageUrl: '/stews.png',
   },
   {

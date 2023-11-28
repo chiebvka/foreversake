@@ -65,7 +65,7 @@ export default function Subscribe({}: Props) {
   return (
     <div className='flex flex-col justify-center w-full  text-white bg-contact bg-cover bg-no-repeat bg-center h-[40vh]'>
       <div className='flex flex-col items-center justify-center w-10/12 md:max-w-full lg:max-w-screen-xl  mx-auto space-y-8 '> 
-        <h1 className={`${october.className} text-center md:text-4xl text-2xl text-primary font-medium`}>
+        <h1 className={`${october.className} text-center md:text-6xl text-2xl text-primary font-medium`}>
           Interested in our product?
         </h1>
 
@@ -79,7 +79,7 @@ export default function Subscribe({}: Props) {
           className="md:mr-2 mr-1 border-primary placeholder:text-primary placeholder:text-sm placeholder:opacity-70" 
           id="email"
           type="email" 
-          placeholder='Subscribe to product updates' 
+          placeholder='Enter your email address' 
           value={formData.email}
           onChange={handleChange}
           required={true}

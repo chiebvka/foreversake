@@ -23,7 +23,7 @@ export default function About({}: Props) {
 
             <div className="gap-4  w-full items-center md:px-4 mx-auto lg:grid lg:grid-cols-2 lg:pb-8 ">
                 <div className="font-light text-white">
-                    <h2 className={`${october.className} mb-4 md:text-4xl text-2xl text-center tracking-tight font-extrabold text-primary`}>Changing the way we remember</h2>
+                    <h2 className={`${october.className} mb-4 md:text-6xl text-2xl text-center tracking-tight font-extrabold text-primary`}>Changing the way we remember</h2>
                     <p className="mb-4 md:text-lg ">
                         Foreversake emerged in Scotland in 2020, envisioned by Dean Macrae and Stewart Gray 
                         to immortalize lost loved ones using a digital memorial accessible to all, a potential revolution in the memorial industry.
@@ -43,7 +43,7 @@ export default function About({}: Props) {
 
             <div className="gap-4 items-center py-2 md:px-4 mx-auto  mt-8 flex flex-col lg:flex-row-reverse">
                 <div className="flex flex-col  lg:text-left justify-start lg:justify-center gap-4 w-[full] lg:w-[50%] lg:h-[50vh] relative lg:sticky top-0">
-                    <h1 className={`${october.className} mb-4 md:text-4xl text-2xl text-center tracking-tight font-extrabold text-primary`}>
+                    <h1 className={`${october.className} mb-4 md:text-6xl text-2xl text-center tracking-tight font-extrabold text-primary`}>
                         Preserve, present & celebrate loved one’s stories.
                     </h1>
                     <p className='font-light md:text-lg text-white'>In the following three years, the Foreversake team meticulously formed partnerships with top-tier suppliers, preparing for market entry. Their dedication to revolutionize remembering loved ones positioned them on the brink of reshaping the memorial industry. Dean Macrae, Stewart Gray, and their team have crafted Foreversake into a promising venture, making memories eternal through technology and ready to redefine how we commemorate those we've lost.</p>
@@ -61,17 +61,7 @@ export default function About({}: Props) {
                         // onAutoplayTimeLeft={onAutoplayTimeLeft}
                         className="mySwiper"
                     >
-                        <SwiperSlide>
-                            <Image
-                            src="/about_us_1.webp"
-                            width={250}
-                            height={350}
-                            className='object-cover h-96 w-96'
-                            alt="About Us Image"
-                            unoptimized
-                            
-                            />
-                        </SwiperSlide>
+
                         <SwiperSlide>
                             <Image
                             src="/swipers1.jpeg"
