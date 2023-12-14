@@ -30,7 +30,7 @@ const Product = () => {
         <div className='flex  flex-col lg:flex-col'>
           <div className='flex flex-col justify-center items-center font-light w-full rounded-2xl  '>
             <p className="mb-4 text-white md:text-lg">Our app is a sanctuary for remembrance. Empowering you to create an interactive and collaborative profile for your loved ones. Share all your most precious moments in vivid detail using photographs, videos, audio clips, and memories you note in the app as you remember them.</p>
-            <p>Foreversake is more than a Product—it's the foundations of bridges across generations, uniting past and present, and safeguarding the spirit of those we love. Come join us on this heartfelt journey of preserving, presenting, and celebrating the stories of the people who make our worlds turn. Together, we'll make sure the memories of your loved ones always shine.</p>
+            <p className="mb-4 text-white md:text-lg">Foreversake is more than a Product — it's the foundations of bridges across generations, uniting past and present, and safeguarding the spirit of those we love. Come join us on this heartfelt journey of preserving, presenting, and celebrating the stories of the people who make our worlds turn. Together, we'll make sure the memories of your loved ones always shine.</p>
           </div>
           <div className='flex justify-center items-center w-full  lg:mx-8'>
             <PopAnimation>
@@ -42,7 +42,7 @@ const Product = () => {
           </div>
           <div className='flex flex-col justify-center items-center font-light text-white w-full bg-opacity-60 rounded-2xl '>
             <p className="mb-4 md:text-lg">Preserving precious memories is now effortless with Foreversake. Our unique 4x4-inch ornament, crafted from high-quality crystalline epoxy, is available in white with silver marbling or black with white marbling, adorned with our emblem in gold. This enduring tribute symbolizes everlasting love, designed to withstand any weather or environment.</p>
-            <p>At the heart of Foreversake lies the power of connection. Using cutting-edge NFC technology, the same technology as contactless payments, a simple tap with any NFC-enable phone connects you to your cherished one's digital memorial. This bridge between the physical and digital realms opens the door to a treasure trove of media and memories.</p>
+            <p className="mb-4 md:text-lg">At the heart of Foreversake lies the power of connection. Using cutting-edge NFC technology, the same technology as contactless payments, a simple tap with any NFC-enable phone connects you to your cherished one's digital memorial. This bridge between the physical and digital realms opens the door to a treasure trove of media and memories.</p>
           </div>
           <div className='flex justify-center items-center w-full  lg:mx-8'>
             <PopAnimation>
